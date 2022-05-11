@@ -1,0 +1,14 @@
+header {
+  background-color: #2f3e46;
+  display: flex;
+  justify-content: center
+}
+
+h1 {
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 35px;
+  color: #84a98c;
+  margin: 20px;
+  font-style: bold;
+  font-weight: 700;
+}

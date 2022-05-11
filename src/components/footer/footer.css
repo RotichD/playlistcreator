@@ -1,0 +1,18 @@
+footer {
+  background-color: #2f3e46;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 2.5rem;
+  flex-wrap: wrap;  
+}
+
+p {
+    color: #cad2c5;
+}
+
+p, a {
+    color: #cad2c5;
+}

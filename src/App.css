@@ -1,0 +1,11 @@
+body {
+  background-color: #cad2c5;
+  margin: 0;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
+p {
+  font-family: "Cabin", Sans-Serif;
+  font-size: 16px;
+}
