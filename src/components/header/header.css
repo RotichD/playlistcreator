@@ -1,5 +1,5 @@
 header {
-  background-color: #2f3e46;
+  background-color: var(--dark);
   display: flex;
   justify-content: center
 }
@@ -7,7 +7,7 @@ header {
 h1 {
   font-family: "Roboto Condensed", Sans-Serif;
   font-size: 35px;
-  color: #84a98c;
+  color: var(--lightgreen);
   margin: 20px;
   font-style: bold;
   font-weight: 700;

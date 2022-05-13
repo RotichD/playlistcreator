@@ -20,16 +20,25 @@ img {
 
 .information {
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 80% 15% 5%;
     grid-template-rows: 50% 50%;
     padding-right: 10px;
 }
 
 .title, .explicit {
     font-weight: 700;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .artist, .trackTime {
     margin-bottom: 8px;
+}
+
+.like, .add {
+    border: none;
+    background: none;
+}
+
+.like {
+    margin-top: 5px;
 }
