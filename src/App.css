@@ -1,3 +1,7 @@
+:root {
+  --dark: #2f3e46;
+}
+
 body {
   background-color: #cad2c5;
   margin: 0;

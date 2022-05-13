@@ -1,0 +1,14 @@
+h2 {
+    font-family: "Roboto Condensed", Sans-Serif;
+    font-size: 28px;
+    color: #52796f;
+    margin: 20px;
+    font-style: bold;
+    font-weight: 700;
+  }
+  
+.resultsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

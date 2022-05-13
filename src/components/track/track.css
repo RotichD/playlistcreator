@@ -1,0 +1,35 @@
+p {
+    font-size: 14px;
+}
+
+img {
+    width: 55px;
+}
+
+.track {
+    display: grid;
+    margin-bottom: 1rem;
+    width: 300px;
+    grid-template-columns: 20% 80%;
+    border-bottom: 1px solid rgba(47, 62, 70, .5);
+}
+
+.explicit, .title, .trackTime, .artist {
+    color: var(--dark)
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 50% 50%;
+    padding-right: 10px;
+}
+
+.title, .explicit {
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.artist, .trackTime {
+    margin-bottom: 8px;
+}
