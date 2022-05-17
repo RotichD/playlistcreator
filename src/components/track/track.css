@@ -4,13 +4,15 @@ p {
 
 img {
   width: 55px;
+  box-shadow: var(--shadow);
 }
 
 .track {
   display: grid;
   margin-bottom: 1rem;
-  width: 300px;
+  padding-right: 5px;
   grid-template-columns: 20% 80%;
+  box-shadow: var(--shadow);
   border-bottom: 1px solid rgba(47, 62, 70, 0.5);
 }
 

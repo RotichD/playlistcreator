@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./track.css";
 
-export const Track = () => {
+export const Track = ({track}) => {
   const [like, setLike] = useState(false);
 
   return (
@@ -13,8 +13,8 @@ export const Track = () => {
         />
       </div>
       <div className="information">
-        <p className="title">Touch The Sky</p>
-        <p className="explicit">E</p>
+        <p className="title">{track.name}</p>
+        <p className="explicit">{track.explicit ? 'E' : 'C'}</p>
         <button className="like" onClick={() => setLike(!like)}>
           {like ? (
             <svg
@@ -43,8 +43,8 @@ export const Track = () => {
             </svg>
           )}
         </button>
-        <p className="artist">Kanye West</p>
-        <p className="trackTime">3:56</p>
+        <p className="artist">{track.artist}</p>
+        <p className="trackTime">{track.trackTime}</p>
         <button className="add">
           <svg
             xmlns="http://www.w3.org/2000/svg"

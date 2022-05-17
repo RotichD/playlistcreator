@@ -4,9 +4,17 @@ import Header from "./components/header/Header";
 import Searchbar from "./components/searchbar/Searchbar";
 import Results from "./components/results/Results";
 import Footer from "./components/footer/Footer";
+import Playlist from "./components/playlist/Playlist";
 
 export const App = () => {
-  const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      name: "Touch The Sky",
+      explicit: true,
+      artist: "Kanye West",
+      trackTime: "3:56",
+    },
+  ]);
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
 
@@ -46,6 +54,13 @@ export const App = () => {
       <Header />
       <Searchbar onSearch={search} />
       <Results searchResults={searchResults} onAdd={addTrack} />
+      <Playlist
+        playlistName={playlistName}
+        playlistTracks={playlistTracks}
+        onRemove={removeTrack}
+        onNameChange={updatePlaylistName}
+        onSave={savePlaylist}
+      />
       <Footer />
     </div>
   );
