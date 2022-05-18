@@ -1,0 +1,56 @@
+p {
+  font-size: 14px;
+}
+
+img {
+  width: 55px;
+  box-shadow: var(--shadow);
+}
+
+.track {
+  display: grid;
+  margin-bottom: 1rem;
+  padding-right: 5px;
+  grid-template-columns: 20% 80%;
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid rgba(47, 62, 70, 0.5);
+}
+
+.explicit,
+.title,
+.trackTime,
+.artist {
+  color: var(--dark);
+}
+
+.information {
+  display: grid;
+  grid-template-columns: 80% 15% 5%;
+  grid-template-rows: 50% 50%;
+  padding-right: 10px;
+}
+
+.title,
+.explicit {
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.artist,
+.trackTime {
+  margin-bottom: 8px;
+}
+
+.like,
+.add {
+  border: none;
+  background: none;
+}
+
+.like {
+  margin-top: 5px;
+}
+
+.add {
+    margin-bottom: 1px;
+}
