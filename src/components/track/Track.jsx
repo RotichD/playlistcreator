@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./track.css";
+import formatTime from "../../util/Length";
 
 export const Track = ({track}) => {
   const [like, setLike] = useState(false);
@@ -8,7 +9,7 @@ export const Track = ({track}) => {
     <div className="track">
       <div className="image">
         <img
-          src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"
+          src={track.image}
           alt="album cover"
         />
       </div>
@@ -44,7 +45,7 @@ export const Track = ({track}) => {
           )}
         </button>
         <p className="artist">{track.artist}</p>
-        <p className="trackTime">{track.trackTime}</p>
+        <p className="trackTime">{formatTime(track.length)}</p>
         <button className="add">
           <svg
             xmlns="http://www.w3.org/2000/svg"

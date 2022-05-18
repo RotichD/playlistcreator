@@ -1,14 +1,16 @@
 h2 {
-    font-family: "Roboto Condensed", Sans-Serif;
-    font-size: 28px;
-    color: var(--green);
-    margin: 20px;
-    font-style: bold;
-    font-weight: 700;
-  }
-  
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 28px;
+  color: var(--green);
+  margin: 20px;
+  font-style: bold;
+  font-weight: 700;
+}
+
 .resultsContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  padding: 0 5%;
 }

@@ -5,6 +5,7 @@ import Searchbar from "./components/searchbar/Searchbar";
 import Results from "./components/results/Results";
 import Footer from "./components/footer/Footer";
 import Playlist from "./components/playlist/Playlist";
+import Spotify from "./util/Spotify";
 
 export const App = () => {
   const [playlistTracks, setPlaylistTracks] = useState([
@@ -46,7 +47,9 @@ export const App = () => {
   };
 
   const search = (term) => {
-    //to do
+    Spotify.search(term).then((searchResults) => {
+      setSearchResults(searchResults);
+    })
   };
 
   return (
