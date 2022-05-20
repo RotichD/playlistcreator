@@ -7,7 +7,6 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
 
   const addTrack = () => {
     onAdd(track);
-    // console.log('Adding Track');
   };
 
   const removeTrack = () => {
@@ -19,16 +18,7 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
     if (!isRemoval) {
       return (
         <button className='add' onClick={addTrack}>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='16'
-            height='16'
-            fill='currentColor'
-            className='bi bi-plus'
-            viewBox='0 0 16 16'
-          >
-            <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z' />
-          </svg>
+          +
         </button>
       );
     } else {
@@ -41,7 +31,7 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
   };
 
   const renderExplicit = () => {
-    return <p className='explicit'>E</p>;
+    return <p className='explicit' title='explicit'>E</p>;
   };
 
   const renderClean = () => {
@@ -62,12 +52,12 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
               xmlns='http://www.w3.org/2000/svg'
               width='16'
               height='16'
-              fill='currentColor'
+              fillRule='currentColor'
               className='bi bi-heart-fill'
               viewBox='0 0 16 16'
             >
               <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z'
               />
             </svg>
@@ -76,7 +66,7 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
               xmlns='http://www.w3.org/2000/svg'
               width='16'
               height='16'
-              fill='currentColor'
+              fillRule='currentColor'
               className='bi bi-heart'
               viewBox='0 0 16 16'
             >
