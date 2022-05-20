@@ -9,7 +9,7 @@ img {
 
 .track {
   display: grid;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
   padding-right: 5px;
   grid-template-columns: 20% 80%;
   box-shadow: var(--shadow);
@@ -42,7 +42,8 @@ img {
 }
 
 .like,
-.add {
+.add,
+.remove {
   border: none;
   background: none;
 }
@@ -51,6 +52,10 @@ img {
   margin-top: 5px;
 }
 
-.add {
-    margin-bottom: 1px;
+.add, .remove {
+  padding: 0;
+  padding-right: 2px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
 }

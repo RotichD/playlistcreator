@@ -8,14 +8,7 @@ import Playlist from "./components/playlist/Playlist";
 import Spotify from "./util/Spotify";
 
 export const App = () => {
-  const [playlistTracks, setPlaylistTracks] = useState([
-    {
-      name: "Touch The Sky",
-      explicit: true,
-      artist: "Kanye West",
-      trackTime: "3:56",
-    },
-  ]);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
 
@@ -27,7 +20,7 @@ export const App = () => {
     }
 
     tracks.push(track);
-    setPlaylistTracks(tracks);
+    setPlaylistTracks([...playlistTracks]);
   };
 
   const removeTrack = (track) => {
@@ -49,21 +42,23 @@ export const App = () => {
   const search = (term) => {
     Spotify.search(term).then((searchResults) => {
       setSearchResults(searchResults);
-    })
+    });
   };
 
   return (
-    <div>
-      <Header />
-      <Searchbar onSearch={search} />
-      <Results searchResults={searchResults} onAdd={addTrack} />
-      <Playlist
-        playlistName={playlistName}
-        playlistTracks={playlistTracks}
-        onRemove={removeTrack}
-        onNameChange={updatePlaylistName}
-        onSave={savePlaylist}
-      />
+    <div className='pageContainer'>
+      <div className='contentWrapper'>
+        <Header />
+        <Searchbar onSearch={search} />
+        <Results searchResults={searchResults} onAdd={addTrack} />
+        <Playlist
+          playlistName={playlistName}
+          playlistTracks={playlistTracks}
+          onRemove={removeTrack}
+          onNameChange={updatePlaylistName}
+          onSave={savePlaylist}
+        />
+      </div>
       <Footer />
     </div>
   );
