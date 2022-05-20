@@ -9,7 +9,7 @@ img {
 
 .track {
   display: grid;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
   padding-right: 5px;
   grid-template-columns: 20% 80%;
   box-shadow: var(--shadow);
