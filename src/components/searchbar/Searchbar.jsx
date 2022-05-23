@@ -7,9 +7,10 @@ export const Searchbar = ({ onSearch }) => {
     setTerm(event.target.value);
   };
 
-  const search = () => {
+  const search = (e) => {
+    e.preventDefault();
     onSearch(term);
-    event.preventDefault();
+  
   };
 
   return (

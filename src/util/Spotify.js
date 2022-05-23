@@ -22,7 +22,7 @@ export const Spotify = {
       window.history.pushState("Access Token", null, "/");
       return accessToken;
     } else {
-      const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
+      const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public,user-library-read&redirect_uri=${redirectUri}`;
       window.location = accessUrl;
     }
   },
@@ -54,6 +54,18 @@ export const Spotify = {
         }));
       });
   },
+
+  async isSaved(trackId) {
+    const accessToken = Spotify.getAccessToken();
+    return await fetch(`https://api.spotify.com/v1/me/tracks/contains?ids=${trackId}`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    })
+    .then((response) => {
+      return response.json();
+    })
+  }
 };
 
 export default Spotify;

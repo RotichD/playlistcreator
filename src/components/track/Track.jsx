@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./track.css";
 import formatTime from "../../util/Length";
+import Spotify from "../../util/Spotify";
 
 export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
+  
   const [like, setLike] = useState(false);
 
   const addTrack = () => {
@@ -38,8 +40,13 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
     return <p className='clean'>clean</p>
   }
 
+  useEffect(() => {
+    Spotify.isSaved(track.id).then((json) => setLike(json[0]))
+  })
+
   return (
     <div className='track'>
+      {/* {savedOrNot()} */}
       <div className='image'>
         <img src={track.image} alt='album cover' />
       </div>
