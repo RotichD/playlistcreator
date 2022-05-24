@@ -10,13 +10,13 @@ export const Searchbar = ({ onSearch }) => {
   const search = (e) => {
     e.preventDefault();
     onSearch(term);
-  
+
   };
 
   return (
     <div className='searchBar'>
       <input placeholder='Search' onChange={handleChange} />
-      <button className='searchButton' onClick={search}>
+      <button className='searchButton' onClick={(e) => search(e)}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'
