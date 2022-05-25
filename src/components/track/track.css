@@ -9,6 +9,7 @@ img {
 
 .track {
   display: grid;
+  max-height: 60px;
   margin-bottom: 5px;
   padding-right: 5px;
   grid-template-columns: 20% 80%;

@@ -36,7 +36,12 @@ export const App = () => {
   };
 
   const savePlaylist = () => {
-    //to do
+    console.log(playlistTracks)
+    const trackUris = playlistTracks.map((track) => track.uri);
+    Spotify.savePlaylist(playlistName, trackUris).then(() => {
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    });
   };
 
   const search = (term) => {

@@ -98,7 +98,7 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
 
   useEffect(() => {
     Spotify.isSaved(track.id).then((json) => setLike(json[0]));
-  });
+  }, []);
 
   return (
     <div className='track'>
