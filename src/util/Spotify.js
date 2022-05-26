@@ -134,6 +134,10 @@ export const Spotify = {
                   body: JSON.stringify({ uris: uriArray }),
                 }
               );
+            })
+            .then((lastResponse) => {
+              console.log(lastResponse);
+              return lastResponse;
             });
         });
     } catch (err) {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
 import Header from "./components/header/Header";
 import Searchbar from "./components/searchbar/Searchbar";
@@ -10,7 +11,7 @@ import Spotify from "./util/Spotify";
 export const App = () => {
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
-  const [playlistName, setPlaylistName] = useState('');
+  const [playlistName, setPlaylistName] = useState("");
 
   const addTrack = (track) => {
     let tracks = playlistTracks;
@@ -38,10 +39,36 @@ export const App = () => {
   const savePlaylist = () => {
     console.log(playlistTracks);
     const trackUris = playlistTracks.map((track) => track.uri);
-    Spotify.savePlaylist(playlistName, trackUris).then(() => {
-      setPlaylistName("");
-      setPlaylistTracks([]);
-    });
+    Spotify.savePlaylist(playlistName, trackUris)
+      .then((response) => {
+        //Good Response
+        if (response.status < 400) {
+          console.log("good status");
+          toast.success(`Playlist saved`, {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        } else {
+          toast.error("Problem saving playlist", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      })
+      .then(() => {
+        setPlaylistName("");
+        setPlaylistTracks([]);
+      });
   };
 
   const search = (term) => {
@@ -62,6 +89,17 @@ export const App = () => {
           onRemove={removeTrack}
           onNameChange={updatePlaylistName}
           onSave={savePlaylist}
+        />
+        <ToastContainer
+          position='bottom-center'
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
         />
       </div>
       <Footer />

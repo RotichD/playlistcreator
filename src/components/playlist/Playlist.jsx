@@ -24,7 +24,7 @@ export const Playlist = ({
       )}
       <input
         className='playlistName'
-        placeholder="Enter Playlist Name"
+        placeholder='Enter Playlist Name'
         onChange={handleInputChange}
         value={playlistName}
       />

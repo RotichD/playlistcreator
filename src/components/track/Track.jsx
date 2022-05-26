@@ -17,6 +17,7 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
     console.log("Removing Track", track);
   };
 
+  //Saving/Unsaving (Adding to User's "Liked Songs") placed here to avoid passing down to two different components
   const unsaveTrack = () => {
     console.log("Unsaving Track: " + track.id);
     Spotify.removeTrack(track.id).then((response) => {
