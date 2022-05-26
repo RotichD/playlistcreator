@@ -37,6 +37,13 @@ img {
   margin-top: 6px;
 }
 
+.title {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .artist,
 .trackTime {
   margin-bottom: 8px;

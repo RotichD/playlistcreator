@@ -154,9 +154,7 @@ export const Track = ({ isRemoval, onAdd, onRemove, track }) => {
       </div>
       <div className='information'>
         <p className='title'>
-          {track.name.length > 50
-            ? track.name.substring(0, 50) + "..."
-            : track.name}
+          {track.name}
         </p>
         {track.explicit ? renderExplicit() : renderClean()}
         {renderSaveButton()}
