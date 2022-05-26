@@ -3,6 +3,30 @@ const redirectUri = "http://localhost:8080/";
 let accessToken;
 
 export const Spotify = {
+
+  async checkAccessToken() {
+    if (accessToken) {
+      return accessToken;
+    }
+
+    //Check for an Access Token that matches
+    const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
+    //Check for expiration time in url
+    const expirationMatch = window.location.href.match(/expires_in=([^&]*)/);
+
+    if (accessTokenMatch && expirationMatch) {
+      accessToken = accessTokenMatch[1];
+      const expiresIn = Number(expirationMatch[1]);
+
+      //clear access Token after expiration time
+      window.setTimeout(() => (accessToken = ""), expiresIn * 1000);
+      window.history.pushState("Access Token", null, "/");
+      return true;
+    } else {
+      return false;
+    }
+  },
+
   getAccessToken() {
     if (accessToken) {
       return accessToken;

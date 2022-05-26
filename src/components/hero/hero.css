@@ -1,0 +1,30 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  max-width: 375px;
+  width: 100%;
+  box-shadow: none;
+}
+
+.login-instructions {
+  margin-top: 4rem;
+  color: var(--dark);
+  text-align: center;
+}
+
+.login-button {
+  width: 120px;
+  height: 25px;
+  background-color: var(--lightgreen);
+  padding: 5px 2px;
+  border-radius: 1.625rem;
+  border: none;
+  color: var(--dark);
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+}

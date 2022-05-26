@@ -148,7 +148,7 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
   return (
     <div className='track'>
       <div className='image'>
-        <img src={track.image} alt='album cover' />
+        <img className='track-iamge' src={track.image} alt='album cover' />
       </div>
       <div className='information'>
         <p className='title'>{track.name.length > 50 ? track.name.substring(0, 50) + '...' : track.name}</p>
