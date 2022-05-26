@@ -7,6 +7,7 @@ export const Playlist = ({
   onRemove,
   onSave,
   playlistTracks,
+  playlistName,
 }) => {
   const handleInputChange = (event) => {
     onNameChange(event.target.value);
@@ -23,8 +24,9 @@ export const Playlist = ({
       )}
       <input
         className='playlistName'
-        defaultValue={"New Playlist"}
+        placeholder="Enter Playlist Name"
         onChange={handleInputChange}
+        value={playlistName}
       />
       <Tracklist tracks={playlistTracks} onRemove={onRemove} isRemoval={true} />
       {playlistTracks.length == 0 && (

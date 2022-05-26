@@ -10,7 +10,7 @@ import Spotify from "./util/Spotify";
 export const App = () => {
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
-  const [playlistName, setPlaylistName] = useState("New Playlist");
+  const [playlistName, setPlaylistName] = useState('');
 
   const addTrack = (track) => {
     let tracks = playlistTracks;
@@ -36,10 +36,10 @@ export const App = () => {
   };
 
   const savePlaylist = () => {
-    console.log(playlistTracks)
+    console.log(playlistTracks);
     const trackUris = playlistTracks.map((track) => track.uri);
     Spotify.savePlaylist(playlistName, trackUris).then(() => {
-      setPlaylistName("New Playlist");
+      setPlaylistName("");
       setPlaylistTracks([]);
     });
   };
