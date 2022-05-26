@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./track.css";
+
 import formatTime from "../../util/Length";
 import Spotify from "../../util/Spotify";
 
-export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
+import "react-toastify/dist/ReactToastify.css";
+import "./track.css";
+
+export const Track = ({ isRemoval, onAdd, onRemove, track }) => {
   const [like, setLike] = useState(false);
 
   const addTrack = () => {
@@ -25,22 +27,22 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
         console.log("Succesfully unsaved track: " + track.id);
         setLike(false);
         toast.success(`Removed ${track.name} from "liked songs"`, {
-          position: "bottom-right",
           autoClose: 2000,
-          hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
           draggable: true,
+          hideProgressBar: false,
+          pauseOnHover: true,
+          position: "bottom-right",
           progress: undefined,
         });
       } else {
         toast.error("Error: problem un-saving track", {
-          position: "bottom-center",
           autoClose: 5000,
-          hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
           draggable: true,
+          hideProgressBar: false,
+          pauseOnHover: true,
+          position: "bottom-center",
           progress: undefined,
         });
       }
@@ -54,22 +56,22 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
         console.log("Successfully saved track: " + track.id);
         setLike(true);
         toast.success(`Added ${track.name} to "liked songs"`, {
-          position: "bottom-right",
           autoClose: 2000,
-          hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
           draggable: true,
+          hideProgressBar: false,
+          pauseOnHover: true,
+          position: "bottom-right",
           progress: undefined,
         });
       } else {
         toast.error("Error: problem saving track", {
-          position: "bottom-center",
           autoClose: 5000,
-          hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
           draggable: true,
+          hideProgressBar: false,
+          pauseOnHover: true,
+          position: "bottom-center",
           progress: undefined,
         });
       }
@@ -151,7 +153,11 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
         <img className='track-iamge' src={track.image} alt='album cover' />
       </div>
       <div className='information'>
-        <p className='title'>{track.name.length > 50 ? track.name.substring(0, 50) + '...' : track.name}</p>
+        <p className='title'>
+          {track.name.length > 50
+            ? track.name.substring(0, 50) + "..."
+            : track.name}
+        </p>
         {track.explicit ? renderExplicit() : renderClean()}
         {renderSaveButton()}
         <p className='artist'>{track.artist}</p>
@@ -159,15 +165,15 @@ export const Track = ({ track, onAdd, onRemove, isRemoval }) => {
         {renderAction()}
       </div>
       <ToastContainer
-        position='bottom-center'
         autoClose={2000}
+        closeOnClick
+        draggable
         hideProgressBar={false}
         newestOnTop={false}
-        closeOnClick
-        rtl={false}
         pauseOnFocusLoss
-        draggable
         pauseOnHover
+        position='bottom-center'
+        rtl={false}
       />
     </div>
   );

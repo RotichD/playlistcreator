@@ -17,11 +17,11 @@ p {
   font-size: 16px;
 }
 
-.pageContainer {
+.page-container {
   min-height: 100vh;
   position: relative;
 }
 
-.contentWrapper {
+.content-wrapper {
   padding-bottom: 4rem;
 }

@@ -1,5 +1,7 @@
 import React from "react";
+
 import Tracklist from "../tracklist/Tracklist";
+
 import "./playlist.css";
 
 export const Playlist = ({
@@ -15,7 +17,7 @@ export const Playlist = ({
 
   return (
     <div className='playlist'>
-      <h2 className='playlistTitle'>New Playlist⬇</h2>
+      <h2 className='playlist-title'>New Playlist⬇</h2>
       {playlistTracks.length == 0 && (
         <p className='instructions'>
           Search for songs and click "+" to add them to the playlist below.
@@ -23,16 +25,16 @@ export const Playlist = ({
         </p>
       )}
       <input
-        className='playlistName'
-        placeholder='Enter Playlist Name'
+        className='playlist-name'
         onChange={handleInputChange}
+        placeholder='Enter Playlist Name'
         value={playlistName}
       />
-      <Tracklist tracks={playlistTracks} onRemove={onRemove} isRemoval={true} />
+      <Tracklist isRemoval={true} onRemove={onRemove} tracks={playlistTracks} />
       {playlistTracks.length == 0 && (
         <p className='instructions'>Tracks you add will appear here</p>
       )}
-      <button className='savePlaylistBtn' onClick={onSave}>
+      <button className='save-playlist-button' onClick={onSave}>
         SAVE PLAYLIST
       </button>
     </div>

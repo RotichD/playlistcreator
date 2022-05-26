@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "./App.css";
+
 import Header from "./components/header/Header";
-import Searchbar from "./components/searchbar/Searchbar";
-import Results from "./components/results/Results";
-import Footer from "./components/footer/Footer";
-import Playlist from "./components/playlist/Playlist";
-import Spotify from "./util/Spotify";
 import Hero from "./components/hero/Hero";
+import Playlist from "./components/playlist/Playlist";
+import Results from "./components/results/Results";
+import Searchbar from "./components/searchbar/Searchbar";
+import Footer from "./components/footer/Footer";
+
+import Spotify from "./util/Spotify";
+import "./App.css";
 
 export const App = () => {
   const [playlistTracks, setPlaylistTracks] = useState([]);
@@ -41,17 +43,17 @@ export const App = () => {
   useEffect(() => {
     Spotify.checkAccessToken().then((response) => {
       if (response === true) {
-        console.log(response, '1')
+        console.log(response, "1");
         setIsLoggedIn(true);
       } else {
-        console.log('something went wrong')
-        console.log(response, '2')
+        console.log("something went wrong");
+        console.log(response, "2");
       }
-    })
-  });
+    });
+  }, []);
 
   const onLogin = () => {
-    Spotify.getAccessToken()
+    Spotify.getAccessToken();
   };
 
   const savePlaylist = () => {
@@ -63,22 +65,22 @@ export const App = () => {
         if (response.status < 400) {
           console.log("good status");
           toast.success(`Playlist saved`, {
-            position: "bottom-right",
             autoClose: 2000,
-            hideProgressBar: false,
             closeOnClick: true,
-            pauseOnHover: true,
             draggable: true,
+            position: "bottom-right",
+            hideProgressBar: false,
+            pauseOnHover: true,
             progress: undefined,
           });
         } else {
           toast.error("Problem saving playlist", {
-            position: "bottom-center",
             autoClose: 5000,
-            hideProgressBar: false,
             closeOnClick: true,
-            pauseOnHover: true,
             draggable: true,
+            hideProgressBar: false,
+            pauseOnHover: true,
+            position: "bottom-center",
             progress: undefined,
           });
         }
@@ -96,30 +98,30 @@ export const App = () => {
   };
 
   return (
-    <div className='pageContainer'>
-      <div className='contentWrapper'>
+    <div className='page-container'>
+      <div className='content-wrapper'>
         <Header />
         {isLoggedIn ? (
           <div>
             <Searchbar onSearch={search} />
-            <Results searchResults={searchResults} onAdd={addTrack} />
+            <Results onAdd={addTrack} searchResults={searchResults} />
             <Playlist
               playlistName={playlistName}
               playlistTracks={playlistTracks}
-              onRemove={removeTrack}
               onNameChange={updatePlaylistName}
+              onRemove={removeTrack}
               onSave={savePlaylist}
             />
             <ToastContainer
-              position='bottom-center'
               autoClose={2000}
+              closeOnClick
+              draggable
               hideProgressBar={false}
               newestOnTop={false}
-              closeOnClick
-              rtl={false}
               pauseOnFocusLoss
-              draggable
               pauseOnHover
+              position='bottom-center'
+              rtl={false}
             />
           </div>
         ) : (

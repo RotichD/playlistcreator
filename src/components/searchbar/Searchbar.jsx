@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./searchbar.css";
 
 export const Searchbar = ({ onSearch }) => {
@@ -20,13 +21,13 @@ export const Searchbar = ({ onSearch }) => {
   };
 
   return (
-    <div className='searchBar'>
+    <div className='search-bar'>
       <input
-        placeholder='Search'
         onChange={handleChange}
         onKeyPress={onKeyUp}
+        placeholder='Search'
       />
-      <button className='searchButton' onClick={(e) => search(e)}>
+      <button className='search-button' onClick={(e) => search(e)}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'

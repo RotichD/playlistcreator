@@ -8,14 +8,14 @@
   margin-top: 30px;
 }
 
-.playlistName {
+.playlist-name {
   color: var(--dark);
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1rem;
 }
 
-.savePlaylistBtn {
+.save-playlist-button {
   width: 120px;
   height: 25px;
   background-color: var(--lightgreen);
@@ -34,6 +34,6 @@
   width: 100vw;
 }
 
-.playlistTitle {
+.playlist-title {
   margin: 0;
 }

@@ -1,12 +1,14 @@
 import React from "react";
-import "./results.css";
+
 import Tracklist from "../tracklist/Tracklist";
 
-export const Results = ({onAdd, searchResults}) => {
+import "./results.css";
+
+export const Results = ({ onAdd, searchResults }) => {
   return (
     <>
       {searchResults.length > 0 && <h2>Results</h2>}
-      <div className="resultsContainer">
+      <div className='results-container'>
         <Tracklist tracks={searchResults} onAdd={onAdd} isRemoval={false} />
       </div>
     </>

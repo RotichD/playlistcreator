@@ -1,18 +1,20 @@
 import React from "react";
-import Track from "../track/Track";
-import './tracklist.css';
 
-export const Tracklist = ({isRemoval, onAdd, onRemove, tracks}) => {
+import Track from "../track/Track";
+
+import "./tracklist.css";
+
+export const Tracklist = ({ isRemoval, onAdd, onRemove, tracks }) => {
   return (
     <div className='tracklist'>
       {tracks.map((track) => {
         return (
           <Track
-            track={track}
+            isRemoval={isRemoval}
             key={track.id}
             onAdd={onAdd}
             onRemove={onRemove}
-            isRemoval={isRemoval}
+            track={track}
           />
         );
       })}
