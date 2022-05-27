@@ -20,3 +20,13 @@ p {
 a {
     color: #cad2c5;
 }
+
+.purpose {
+  width: 100%;
+  text-align: center;
+}
+
+.github {
+  width: 100%;
+  text-align: center;
+}
