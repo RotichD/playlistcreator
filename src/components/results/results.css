@@ -13,6 +13,7 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   width: 90vw;
+  margin: auto;
 }
 
 @media screen and (min-width: 875px) {
