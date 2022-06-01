@@ -17,6 +17,14 @@ export const Playlist = ({
 
   return (
     <div className='playlist'>
+      {playlistTracks.length > 0 && (
+        <input
+          className='playlist-name'
+          onChange={handleInputChange}
+          placeholder='Enter Playlist Name'
+          value={playlistName}
+        />
+      )}
       <h2 className='playlist-title'>New Playlist⬇</h2>
       {playlistTracks.length == 0 && (
         <p className='instructions'>
@@ -24,12 +32,6 @@ export const Playlist = ({
           Click "SAVE PLAYLIST" to save the playlist to your Spotify Account
         </p>
       )}
-      <input
-        className='playlist-name'
-        onChange={handleInputChange}
-        placeholder='Enter Playlist Name'
-        value={playlistName}
-      />
       <Tracklist isRemoval={true} onRemove={onRemove} tracks={playlistTracks} />
       {playlistTracks.length == 0 && (
         <p className='instructions'>Tracks you add will appear here</p>

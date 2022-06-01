@@ -5,6 +5,7 @@
   margin: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .search-button {
@@ -23,6 +24,7 @@
 input {
   flex-basis: 100%;
   width: 100%;
+  max-width: 680px;
   height: 2rem;
   font-size: 16px;
   color: var(--dark);
@@ -32,3 +34,4 @@ input {
   padding: 0 1rem;
   box-shadow: var(--shadow);
 }
+

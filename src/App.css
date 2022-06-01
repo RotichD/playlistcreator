@@ -25,3 +25,20 @@ p {
 .content-wrapper {
   padding-bottom: 4rem;
 }
+
+.results-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 875px) {
+  .list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .results-wrapper {
+    width: 50%;
+  }
+}
