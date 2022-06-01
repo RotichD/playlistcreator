@@ -1,6 +1,7 @@
 # Playlist Creator
 
-> Simple application that allows users to search songs and create playlists using the Spotify API
+> Simple application that allows users to search songs and create playlists using the Spotify API.  
+> *While the app live and public, Spotify API access is limited to 25 spotify accounts (Developer Mode). This is in line with Spotify's policy for smaller projects. Please see [Demo Video](https://youtu.be/s-qnxqcxXOE) for instructions*
 
 ## Description
 
@@ -11,10 +12,15 @@
 
 ## Table of Contents
 
+- [Demonstration](#demonstration)
 - [Features](#features)
 - [Usage](#usage)
 - [Technologies](#Technologies)
 - [License](#license)
+
+## Demonstration
+[YouTube Demo Video](https://youtu.be/s-qnxqcxXOE)  
+https://user-images.githubusercontent.com/65515418/171514572-1a2ad029-c1e3-4f86-8296-7a91e3d117b4.mp4
 
 ## Features
 
