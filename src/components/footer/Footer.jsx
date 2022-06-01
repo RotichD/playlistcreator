@@ -5,9 +5,10 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <footer>
-      <p>For Creating and Adding Songs to Spotify Playlists</p>
-      <br />
-      <p>
+      <p className='purpose'>
+        For Creating and Adding Songs to Spotify Playlists
+      </p>
+      <p className='github'>
         Project by{" "}
         <a href='https://github.com/RotichD' target='blank'>
           Dylan Rotich

@@ -7,8 +7,8 @@ import "./results.css";
 export const Results = ({ onAdd, searchResults }) => {
   return (
     <>
-      {searchResults.length > 0 && <h2>Results</h2>}
       <div className='results-container'>
+        {searchResults.length > 0 && <h2>Results</h2>}
         <Tracklist tracks={searchResults} onAdd={onAdd} isRemoval={false} />
       </div>
     </>

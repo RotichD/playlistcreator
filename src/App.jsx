@@ -102,9 +102,11 @@ export const App = () => {
       <div className='content-wrapper'>
         <Header />
         {isLoggedIn ? (
-          <div>
-            <Searchbar onSearch={search} />
-            <Results onAdd={addTrack} searchResults={searchResults} />
+          <div className='list-wrapper'>
+            <div className='results-wrapper'>
+              <Searchbar onSearch={search} />
+              <Results onAdd={addTrack} searchResults={searchResults} />
+            </div>
             <Playlist
               playlistName={playlistName}
               playlistTracks={playlistTracks}
