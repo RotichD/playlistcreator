@@ -15,12 +15,13 @@
 - [Demonstration](#demonstration)
 - [Features](#features)
 - [Usage](#usage)
-- [Technologies](#Technologies)
+- [Technologies](#technologies)
 - [License](#license)
 
-## Demonstration
-[YouTube Demo Video](https://youtu.be/s-qnxqcxXOE)  
-https://user-images.githubusercontent.com/65515418/171514572-1a2ad029-c1e3-4f86-8296-7a91e3d117b4.mp4
+## Demonstration 
+[Full YouTube Demo Video Here](https://youtu.be/s-qnxqcxXOE)  
+<img src="https://user-images.githubusercontent.com/65515418/171515767-a585fe06-a8ec-4f18-8721-727f2a37b3b4.gif" width="500" />
+
 
 ## Features
 
@@ -35,8 +36,8 @@ https://user-images.githubusercontent.com/65515418/171514572-1a2ad029-c1e3-4f86-
 - Enter a playlist name into the input field.
 - Click the `Save Playlist` button to save the playlist to the user's Spotify Account.
 
-  ![App Demonstration Screenshot](/public/images/searchexample.png)
-  ![App Demonstration Screenshot](/public/images/playlistexample.png)
+  <img src="https://github.com/RotichD/playlistcreator/blob/main/public/images/searchexample.png" width="300" />
+  <img src="https://github.com/RotichD/playlistcreator/blob/main/public/images/playlistexample.png" width="300" /> 
 
 ## Technologies
 
