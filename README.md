@@ -20,7 +20,7 @@
 
 ## Demonstration 
 [Full YouTube Demo Video Here](https://youtu.be/s-qnxqcxXOE)  
-<img src="https://user-images.githubusercontent.com/65515418/171515767-a585fe06-a8ec-4f18-8721-727f2a37b3b4.gif" width="500" />
+[<img src="https://user-images.githubusercontent.com/65515418/171515767-a585fe06-a8ec-4f18-8721-727f2a37b3b4.gif" width="500" />](https://youtu.be/s-qnxqcxXOE)
 
 
 ## Features
